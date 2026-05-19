@@ -11,4 +11,6 @@ public class ComponentType
     public string Abbreviation { get; set; } = null!;
 
     public string Name { get; set; } = null!;
+
+    public IEnumerable<Component> Components { get; set; } = [];
 }

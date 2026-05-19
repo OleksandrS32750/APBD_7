@@ -16,7 +16,13 @@ public class Component
     [Column(TypeName = "nvarchar(max)")]
     public string Description { get; set; } = null!;
 
-    public int ComponentTypesId { get; set; }
+    public int ComponentTypeId { get; set; }
     public ComponentType ComponentType { get; set; } = null!;
+
+    public int ComponentManufacturersId { get; set; }
+    public ComponentManufacturer ComponentManufacturer { get; set; } = null!;
+
+
+    IEnumerable<PCComponent> PCComponents { get; set; } = [];
 
 }
