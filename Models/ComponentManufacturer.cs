@@ -15,5 +15,5 @@ public class ComponentManufacturer
 
     public DateOnly FoundationDate { get; set; }
 
-    public IEnumerable<Component> Components { get; set; } = [];
+    public ICollection<Component> Components { get; set; } = [];
 }

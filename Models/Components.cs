@@ -16,13 +16,15 @@ public class Component
     [Column(TypeName = "nvarchar(max)")]
     public string Description { get; set; } = null!;
 
-    public int ComponentTypeId { get; set; }
+    public int ComponentManufacturersId { get; set; }
+
+    [ForeignKey(nameof(ComponentManufacturersId))]
+    public ComponentManufacturer ComponentManufacturer { get; set; } = null!;
+    public int ComponentTypesId { get; set; }
+
+    [ForeignKey(nameof(ComponentTypesId))]
     public ComponentType ComponentType { get; set; } = null!;
 
-    public int ComponentManufacturersId { get; set; }
-    public ComponentManufacturer ComponentManufacturer { get; set; } = null!;
-
-
-    IEnumerable<PCComponent> PCComponents { get; set; } = [];
+    public ICollection<PCComponent> PCComponents { get; set; } = [];
 
 }

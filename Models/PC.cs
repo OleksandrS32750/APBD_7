@@ -20,5 +20,5 @@ public class PC
 
     public int Stock { get; set; }
 
-    public IEnumerable<PCComponent> PCComponents { get; set; } = [];
+    public ICollection<PCComponent> PCComponents { get; set; } = [];
 }

@@ -422,3 +422,8 @@ fabric.properties
 
 .idea/
 .DS_Store
+
+Migrations/
+
+obj/
+bin/
